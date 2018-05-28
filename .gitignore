@@ -1,0 +1,8 @@
+# ignore r markdown files
+*.Rmd
+
+# ignore R notebook files
+*.nb.html
+
+# ignore Rproj
+*.Rproj
