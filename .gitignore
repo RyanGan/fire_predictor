@@ -1,8 +1,16 @@
 # ignore r markdown files
 *.Rmd
+# ignore r markdown htmls
+r_scripts/*.html
+
+# ignore pynotebook checks
+*.ipynb
 
 # ignore R notebook files
 *.nb.html
+
+# ignore data folder
+data/
 
 # ignore Rproj
 *.Rproj
