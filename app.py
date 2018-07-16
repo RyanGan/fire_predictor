@@ -27,7 +27,7 @@ import pysal as ps
 import math
 
 # load data -----
-current_fires = pd.read_csv('./data/fire_locations.csv')
+current_fires = pd.read_csv('./app_data/fire_locations.csv')
 # transform lat/lon coordinates to mercator projection
 fire_coords = []
 for i in zip(current_fires.longitude, current_fires.latitude):
@@ -47,7 +47,7 @@ for s in current_fires.area:
     size.append(math.sqrt(s/50))
     
 # read in shapefile for grid
-grid = gp.read_file('./data/grid_poly/grid_poly.shp')
+grid = gp.read_file('./app_data/grid_poly/grid_poly.shp')
 # convert projection to mercator
 grid = grid.to_crs(crs={'init':'epsg:3857'})
 
