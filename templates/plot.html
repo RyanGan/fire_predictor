@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wildfire Monthly Probability</title>
+        <link href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.16.min.css"
+            rel="stylesheet" type="text/css">
+        <link href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.16.min.css"
+            rel="stylesheet" type="text/css">
+        <link href="https://cdn.pydata.org/bokeh/release/bokeh-tables-0.12.16.min.css"
+            rel="stylesheet" type="text/css">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+                body {
+                    margin: 0;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+                .topnav {
+                    overflow: hidden;
+                    background-color: #333;
+                }
+                .topnav a {
+                    float: left;
+                    color: #f2f2f2;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    font-size: 17px;
+                }
+                .topnav a:hover {
+                    background-color: #ddd;
+                    color: black;
+                    }
+                .topnav a.active {
+                    background-color: #4ca3af;
+                    color: white;
+                }
+            </style>
+    </head>
+    
+    <div class="topnav">
+        <a class="active" href="/index">Home</a>
+        <a href="/about">About</a>
+        <a href="https://github.com/RyanGan/flask-framework">GitHub</a>
+    </div>
+    
+    <body>
+        <div style="padding-left:24px">
+            <h2>Wildfire Monthly Probability</h2>
+            <p> Map displaying the monthly risk in predicted probability for a wildfire. For example, a probability of 0.20 for a given location would suggest that if we had similar conditions, we would expect a fire to occure 20 out of 100 times (or 2 out of 10 times).</p>
+            {{ p_div|safe }}
+            <script src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.16.min.js"></script>
+            <script src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.16.min.js"></script>
+            <script src="https://cdn.pydata.org/bokeh/release/bokeh-tables-0.12.16.min.js"></script>
+            {{ p_script|safe }}
+        </div>
+    </body>
+</html>

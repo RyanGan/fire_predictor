@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Skeleton application demoing Heroku and Flask integration.">
+    <meta name="author" content="@gotoariel">
+    <!-- <link rel="icon" href="favicon.ico"> -->
+
+    <title>Wildfire Monthly Probability</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Custom CSS for navbar -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+    }
+    .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+    .topnav a.active {
+        background-color: #4ca3af;
+        color: white;
+    }
+    </style>
+    </head>
+
+    <body>
+        <!-- navigation -->
+        <div class="topnav">
+            <a href="/index">Home</a>
+            <a class="activate" href="/about">About</a>
+            <a href="https://github.com/RyanGan/flask-framework">GitHub</a>
+        </div>
+        
+    <div style='padding-left:16px'>
+        <h2> About the <i>Wildfire Prediction Application</i></h2>
+        
+        <p> This app was built to help visualize areas at risk for a wildfire in the United States.</p>
+        
+        <p> This project uses historic monthly temperature, precipitation, and humidity data from the National Oceanic and Atmospheric Administration (NOAA) and historic wildfire data from the United States Forest Service. A logistic regression model was fit on these data and used to predict likelihood (predicited probiablity) of a wildfire occuring for a given month using current monthly data from NOAA.</p>
+        
+        <p> Current wildfires have been overlayed on top of the risk map.</p>
+
+<!-- Bootstrap core JavaScript
+ ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>
