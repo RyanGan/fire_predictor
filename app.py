@@ -45,6 +45,11 @@ for lon, lat in fire_coords:
 size = []
 for s in current_fires.area:
     size.append(math.sqrt(s/50))
+
+# fire size
+fire_type = []
+for t in current_fires.type:
+    fire_type.append(t) 
     
 # read in shapefile for grid
 grid = gp.read_file('./app_data/grid_poly/grid_poly.shp')
@@ -86,7 +91,7 @@ app = Flask(__name__)
 def about():
     return render_template('about.html')
 
-@app.route('/index', methods=['GET'])
+@app.route('/', methods=['GET'])
 def make_map():
     # initial figure
     p = figure(x_range=(-14230740, -7866287), y_range=(3008561, 6207909), 
@@ -108,6 +113,7 @@ def make_map():
     script, div = components(p)
 
     return render_template('plot.html', p_script=script, p_div=div)
-    
+
+
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=33507, debug=True)
